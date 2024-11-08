@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bot Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-mode">
+    <!-- Sidebar with Tabs -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Auto Mod Bot</h2>
+            <button class="toggle-btn" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav>
+            <ul>
+                <li><button onclick="showSection('overview')"><i class="fas fa-home"></i> Overview</button></li>
+                <li><button onclick="showSection('settings')"><i class="fas fa-cogs"></i> Settings</button></li>
+                <li><button onclick="showSection('user-stats')"><i class="fas fa-users"></i> User Stats</button></li>
+                <li><button onclick="showSection('logs')"><i class="fas fa-history"></i> Action Logs</button></li>
+                <li><button onclick="showSection('audit')"><i class="fas fa-clipboard-check"></i> Audit Logs</button></li>
+                <li><button onclick="showSection('analytics')"><i class="fas fa-chart-line"></i> Analytics</button></li>
+                <li><button onclick="showSection('customization')"><i class="fas fa-edit"></i> Custom Messages</button></li>
+                <li><button onclick="showSection('about')"><i class="fas fa-info-circle"></i> About</button></li>
+                <li><button onclick="showSection('commands')"><i class="fas fa-list"></i> Commands</button></li>
+                <li><button onclick="showSection('ping')"><i class="fas fa-signal"></i> Ping</button></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Header with Dark Mode Toggle -->
+        <header class="header">
+            <h1>Dashboard</h1>
+            <div class="actions">
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+                    <i class="fas fa-moon"></i> Dark Mode
+                </button>
+                <button class="logout-btn">Log Out <i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </header>
+
+        <!-- Overview Section -->
+        <section id="overview" class="card tab-content">
+            <h2>Bot Overview</h2>
+            <p>Bot Status: <span class="status online">Online</span></p>
+            <p>Active Servers: <span id="server-count">56</span></p>
+            <p>Total Moderated Messages: <span id="message-count">1203</span></p>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="card tab-content">
+            <h2>Auto Moderation Settings</h2>
+            <!-- Settings form goes here -->
+        </section>
+
+        <!-- User Stats Section -->
+        <section id="user-stats" class="card tab-content">
+            <h2>User Statistics</h2>
+            <!-- User statistics table goes here -->
+        </section>
+
+        <!-- Action Logs Section -->
+        <section id="logs" class="card tab-content">
+            <h2>Moderation Logs</h2>
+            <!-- Moderation logs list goes here -->
+        </section>
+
+        <!-- Audit Logs Section -->
+        <section id="audit" class="card tab-content">
+            <h2>Audit Logs</h2>
+            <!-- Audit logs list goes here -->
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analytics" class="card tab-content">
+            <h2>Analytics</h2>
+            <!-- Analytics chart goes here -->
+        </section>
+
+        <!-- Custom Messages Section -->
+        <section id="customization" class="card tab-content">
+            <h2>Custom Bot Messages</h2>
+            <!-- Custom bot messages form goes here -->
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="card tab-content">
+            <h2>About</h2>
+            <p><strong>Version:</strong> 1.0.0</p>
+            <p><strong>Developed By:</strong> Auto Mod Bot Team</p>
+            <p><strong>Supporters:</strong> Discord Community</p>
+        </section>
+
+        <!-- Commands Section -->
+        <section id="commands" class="card tab-content">
+            <h2>Commands</h2>
+            <ul>
+                <li><strong>!warn</strong> - Warn a user.</li>
+                <li><strong>!mute</strong> - Mute a user.</li>
+                <li><strong>!ban</strong> - Ban a user.</li>
+                <!-- More commands can be added here -->
+            </ul>
+        </section>
+
+        <!-- Ping Section -->
+        <section id="ping" class="card tab-content">
+            <h2>Ping</h2>
+            <p><strong>Latency:</strong> 25 ms</p>
+            <p><strong>Uptime:</strong> 5 hours 20 minutes</p>
+            <p><strong>RAM Usage:</strong> 512 MB</p>
+            <p><strong>CPU Usage:</strong> 30%</p>
+            <p><strong>Servers:</strong> 120</p>
+            <p><strong>Total Members:</strong> 12,500</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
