@@ -1,0 +1,8 @@
+/* Tab Content Styling */
+.tab-content {
+    display: none; /* Hide all sections by default */
+}
+
+.tab-content.active {
+    display: block; /* Only show the active section */
+}
